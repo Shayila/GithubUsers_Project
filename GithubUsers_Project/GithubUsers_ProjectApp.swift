@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct GithubUsers_ProjectApp: App {
+   // @StateObject var path = NavigationManager()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().modelContainer(for:[RepositoryEntity.self,OwnerEntity.self])
+                
         }
     }
 }
